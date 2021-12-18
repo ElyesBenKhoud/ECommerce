@@ -39,6 +39,10 @@ const userCtrl = {
       return res.status(500).json({ msg: err.message });
     }
   },
+  refreshToken: (req, res) => {
+    const rf_token = req.cookie.refreshtoken;
+    res.json({ rf_token });
+  },
 };
 
 const createAccessToken = (user) => {
