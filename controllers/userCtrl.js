@@ -21,7 +21,7 @@ const userCtrl = {
         email,
         password: passwordHash,
       });
-
+      await newUser.save();
       res.json({ msg: newUser });
     } catch (err) {
       return res.status(500).json({ msg: err.message });
