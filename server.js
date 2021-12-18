@@ -29,9 +29,9 @@ mongoose.connect(
   }
 );
 
-app.get("/", (req, res) => {
-  res.json({ msg: "welcome Elyes , everything is working" });
-});
+// app.get("/", (req, res) => {
+//   res.json({ msg: "welcome Elyes , everything is working" });
+// });
 
 const PORT = process.env.PORT || 5000;
 
