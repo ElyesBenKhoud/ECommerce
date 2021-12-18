@@ -12,8 +12,8 @@ const userCtrl = {
       const user = await Users.findOne({ email });
       if (user)
         return res.status(400).json({ msg: "This email is already in user." });
-      // password should be more than 6 char
-      if (password.length < 6)
+      // password should be more than 8 char
+      if (password.length < 8)
         return res
           .status(400)
           .json({ msg: "password should be at least 7 character" });
