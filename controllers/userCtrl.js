@@ -40,7 +40,7 @@ const userCtrl = {
     }
   },
   refreshToken: (req, res) => {
-    const rf_token = req.cookie.refreshtoken;
+    const rf_token = req.cookies.refreshToken;
     res.json({ rf_token });
   },
 };
