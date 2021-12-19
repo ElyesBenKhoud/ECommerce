@@ -16,7 +16,7 @@ const userCtrl = {
       if (password.length < 8)
         return res
           .status(400)
-          .json({ msg: "password should be at least 7 character" });
+          .json({ msg: "password should be at least 8 character" });
 
       //password bcrypt
       const passwordHash = await bcrypt.hash(password, 10);
