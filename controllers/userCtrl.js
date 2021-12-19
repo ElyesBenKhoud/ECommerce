@@ -85,6 +85,16 @@ const userCtrl = {
       return res.status(500).json({ msg: error.message });
     }
   },
+  getUser: async (req, res) => {
+    try {
+      // -password says to not return it
+      const user = await Users.findById(req.user.id).select("-password");
+      if (!user) return res.status(400).json({ msg: "user does not exist" });
+      res.json(user);
+    } catch (error) {
+      return res.status(500).json({ msg: error.message });
+    }
+  },
 };
 
 const createAccessToken = (user) => {
