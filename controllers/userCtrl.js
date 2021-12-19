@@ -45,7 +45,7 @@ const userCtrl = {
 
       const user = await Users.findOne({ email });
       if (!user) return res.status(400).json({ msg: "user does not exist" });
-
+      // comparing password after hash
       const isMatch = await bcrypt.compare(password, user.password);
       if (!isMatch) return res.status(400).json({ msg: "Incorrect password" });
 
@@ -57,6 +57,7 @@ const userCtrl = {
         path: "/user/refresh_token",
       });
       res.json({ msg: accessToken });
+      //if error
     } catch (error) {
       return res.status(500).json({ msg: error.message });
     }
