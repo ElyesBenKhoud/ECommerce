@@ -50,7 +50,13 @@ const userCtrl = {
       if (!isMatch) return res.status(400).json({ msg: "Incorrect password" });
 
       //if login success , create accesstoken and refresh token
-      res.json({ msg: "login success" });
+      const accessToken = createAccessToken({ id: user._id });
+      const refreshToken = createRefreshToken({ id: user._id });
+      res.cookie("refreshToken", refreshToken, {
+        httpOnly: true,
+        path: "/user/refresh_token",
+      });
+      res.json({ msg: accessToken });
     } catch (error) {
       return res.status(500).json({ msg: error.message });
     }
