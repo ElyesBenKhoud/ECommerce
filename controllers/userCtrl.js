@@ -34,6 +34,7 @@ const userCtrl = {
         httpOnly: true,
         path: "/user/refresh_token",
       });
+      //sending back token
       res.json({ msg: accessToken });
     } catch (err) {
       return res.status(500).json({ msg: err.message });
