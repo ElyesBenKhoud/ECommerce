@@ -26,6 +26,7 @@ const categoryCtrl = {
       return res.status(500).json({ msg: error.message });
     }
   },
+  deleteCategory: async (req, res) => {},
 };
 
 module.exports = categoryCtrl;
