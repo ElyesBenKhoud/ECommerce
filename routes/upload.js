@@ -5,7 +5,7 @@ const cloudinary = require("cloudinary");
 const auth = require("../middleware/auth");
 
 const authAdmin = require("../middleware/authAdmin");
-
+const fs = require("fs");
 //upload img using cloudinary
 
 cloudinary.config({
@@ -23,17 +23,22 @@ router.post("/upload", (req, res) => {
 
     const file = req.files.file;
     //1 mo size 1024*1024
-    if (file.size > 1024 * 1024)
+    if (file.size > 1024 * 1024) {
+      removeTmp(file.tempFilePath);
       return res.status(400).json({ msg: "size too large" });
+    }
     //handleing type of img
-    if (file.mimetype !== "image/jpeg" && file.mimetype !== "image/png")
+    if (file.mimetype !== "image/jpeg" && file.mimetype !== "image/png") {
+      removeTmp(file.tempFilePath);
       return res.status(400).json({ msg: "file format is incorrect." });
+    }
 
     cloudinary.v2.uploader.upload(
       file.tempFilePath,
       { folder: "test" },
       async (err, result) => {
         if (err) throw err;
+        removeTmp(file.tempFilePath);
 
         res.json({ public_id: result.public_id, url: result.secure_url });
       }
@@ -42,5 +47,12 @@ router.post("/upload", (req, res) => {
     res.status(500).json({ msg: error.message });
   }
 });
+
+//removing Tmp folder after each upload
+const removeTmp = (path) => {
+  fs.unlink(path, (err) => {
+    if (err) throw err;
+  });
+};
 
 module.exports = router;
