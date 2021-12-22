@@ -29,7 +29,15 @@ router.post("/upload", (req, res) => {
     if (file.mimetype !== "image/jpeg" && file.mimetype !== "image/png")
       return res.status(400).json({ msg: "file format is incorrect." });
 
-    res.json("img received");
+    cloudinary.v2.uploader.upload(
+      file.tempFilePath,
+      { folder: "test" },
+      async (err, result) => {
+        if (err) throw err;
+
+        res.json({ public_id: result.public_id, url: result.secure_url });
+      }
+    );
   } catch (error) {
     res.status(500).json({ msg: error.message });
   }
