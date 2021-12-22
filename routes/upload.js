@@ -41,7 +41,10 @@ router.post("/upload", auth, authAdmin, (req, res) => {
         if (err) throw err;
         removeTmp(file.tempFilePath);
 
-        res.json({ public_id: result.public_id, url: result.secure_url });
+        return res.json({
+          public_id: result.public_id,
+          url: result.secure_url,
+        });
       }
     );
   } catch (error) {
@@ -58,7 +61,7 @@ router.post("/destroy", (req, res) => {
     cloudinary.v2.uploader.destroy(public_id, async (err, result) => {
       if (err) throw err;
 
-      res.json({ msg: " deleted img" });
+      return res.json({ msg: " deleted img" });
     });
   } catch (error) {
     return res.status(500).json({ msg: error.message });
