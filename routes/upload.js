@@ -13,3 +13,12 @@ cloudinary.config({
   api_key: process.env.CLOUD_API_KEY,
   api_secret: process.env.CLOUD_API_SECRET,
 });
+
+router.post("/upload", (req, res) => {
+  try {
+  } catch (error) {
+    res.status(500).json({ msg: error.message });
+  }
+});
+
+module.exports = router;
