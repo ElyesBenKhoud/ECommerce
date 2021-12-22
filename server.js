@@ -18,6 +18,7 @@ app.use(
 //Routes
 app.use("/user", require("./routes/userRouter"));
 app.use("/api", require("./routes/categoryRouter"));
+app.use("/api", require("./routes/upload"));
 
 //connect tp MongoDB
 const URI = process.env.MONGODB_URL;
