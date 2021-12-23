@@ -22,7 +22,6 @@ class APIfeatures {
       (match) => "$" + match
     );
 
-    console.log({ queryStr });
     //gte is greater than or equal
     // lte is lesser than or equal
     // lt is lesser than
