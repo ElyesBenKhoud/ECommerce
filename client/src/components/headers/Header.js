@@ -27,7 +27,18 @@ const Header = () => {
         <li>
           <Link to="/login"> Login Or Register</Link>
         </li>
+
+        <li>
+          <img src={Close} alt="" width="30" />
+        </li>
       </ul>
+
+      <div className="cart-icon">
+        <span>0</span>
+        <Link>
+          <img src={Cart} alt="" width="30" />
+        </Link>
+      </div>
     </Header>
   );
 };
