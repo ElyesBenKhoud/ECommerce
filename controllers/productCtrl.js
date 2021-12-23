@@ -11,6 +11,26 @@ class APIfeatures {
   filtering() {
     // this.queryString=req.query
     const queryObj = { ...this.queryString };
+    //before delete page
+    const excludeFields = ["page", "sort", "limit"];
+    excludeFields.forEach((el) => delete queryObj[el]);
+
+    let queryStr = JSON.stringify(queryObj);
+
+    queryStr = queryStr.replace(
+      /\b(gte|gt|lt|lte|regex)\b/g,
+      (match) => "$" + match
+    );
+
+    console.log({ queryStr });
+    //gte is greater than or equal
+    // lte is lesser than or equal
+    // lt is lesser than
+    //gt is greater than
+
+    this.query.find(JSON.parse(queryStr));
+
+    return this; //after delete pages
   }
 
   sorting() {}
