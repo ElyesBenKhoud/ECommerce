@@ -8,7 +8,10 @@ class APIfeatures {
     this.queryString = queryString;
   }
 
-  filtering() {}
+  filtering() {
+    // this.queryString=req.query
+    const queryObj = { ...this.queryString };
+  }
 
   sorting() {}
 
@@ -18,7 +21,8 @@ class APIfeatures {
 const productCtrl = {
   getProducts: async (req, res) => {
     try {
-      const features = new APIfeatures(Products.find(), req.query);
+      const features = new APIfeatures(Products.find(), req.query).filtering();
+
       const products = await features.query;
 
       res.json(products);
