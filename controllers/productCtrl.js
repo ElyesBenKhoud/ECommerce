@@ -45,7 +45,9 @@ class APIfeatures {
     return this;
   }
 
-  pagination() {}
+  pagination() {
+    return this;
+  }
 }
 
 const productCtrl = {
