@@ -3,6 +3,7 @@ const Products = require("../models/productModel");
 const productCtrl = {
   getProducts: async (req, res) => {
     try {
+      res.json("test");
     } catch (error) {
       return res.status(500).json({ msg: error.message });
     }
