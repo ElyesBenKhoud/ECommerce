@@ -32,7 +32,13 @@ class APIfeatures {
     return this; //after delete pages
   }
 
-  sorting() {}
+  sorting() {
+    if (this.queryString.sort) {
+      const sortBy = this.queryString.sort.split(",").join(" ");
+      console.log(sortBy);
+    }
+    return this;
+  }
 
   pagination() {}
 }
