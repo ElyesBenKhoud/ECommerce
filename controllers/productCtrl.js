@@ -38,8 +38,10 @@ class APIfeatures {
 
       this.query = this.query.sort(sortBy);
     } else {
-      this.query = this.query.sort("-create");
+      //sort by createAt default MongoDB attr
+      this.query = this.query.sort("-createAt");
     }
+
     return this;
   }
 
