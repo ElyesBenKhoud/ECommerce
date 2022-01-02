@@ -78,7 +78,7 @@ function Login() {
             </button>
           </form>
           <div class="social-login">
-            <h3>Register</h3>
+            <Link to="/register">Register</Link>
           </div>
         </div>
         <div class="screen__background">
