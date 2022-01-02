@@ -77,9 +77,12 @@ function Login() {
               <i class="button__icon fas fa-chevron-right"></i>
             </button>
           </form>
-          <div class="social-login">
-            <Link to="/register">Register</Link>
-          </div>
+          <button class="button register__submit">
+            <Link to="/register" class="button__text">
+              Register
+            </Link>
+            <i class="button__icon fas fa-chevron-right"></i>
+          </button>
         </div>
         <div class="screen__background">
           <span class="screen__background__shape screen__background__shape4"></span>
