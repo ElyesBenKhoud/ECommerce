@@ -55,7 +55,7 @@ function Register() {
               <input
                 type="text"
                 class="login__input"
-                placeholder="Email ..."
+                placeholder="Your name goes here ..."
                 name="name"
                 required
                 value={user.name}
