@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function Register() {
+  const notify = () => toast("Check Your password or Your Email");
+
   const [user, setUser] = useState({
     name: "",
     email: "",
@@ -23,7 +27,7 @@ function Register() {
 
       window.location.href = "/";
     } catch (err) {
-      alert(err.response.data.msg);
+      notify();
     }
   };
 
@@ -88,6 +92,7 @@ function Register() {
           <span class="screen__background__shape screen__background__shape1"></span>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 }
