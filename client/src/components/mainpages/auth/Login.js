@@ -27,31 +27,15 @@ function Login() {
   };
 
   return (
-    // <div className="login-page">
-    //     <form onSubmit={loginSubmit}>
-    //         <h2>Login</h2>
-    //         <input type="email" name="email" required
-    //         placeholder="Email" value={user.email} onChange={onChangeInput} />
-
-    //         <input type="password" name="password" required autoComplete="on"
-    //         placeholder="Password" value={user.password} onChange={onChangeInput} />
-
-    //         <div className="row">
-    //             <button type="submit">Login</button>
-    //             <Link to="/register">Register</Link>
-    //         </div>
-    //     </form>
-    // </div>
-
-    <div class="container">
-      <div class="screen">
-        <div class="screen__content">
-          <form class="login" onSubmit={loginSubmit}>
-            <div class="login__field">
-              <i class="login__icon fas fa-user"></i>
+    <div className="container">
+      <div className="screen">
+        <div className="screen__content">
+          <form className="login" onSubmit={loginSubmit}>
+            <div className="login__field">
+              <i className="login__icon fas fa-user"></i>
               <input
                 type="text"
-                class="login__input"
+                className="login__input"
                 placeholder="Email ..."
                 name="email"
                 required
@@ -59,11 +43,11 @@ function Login() {
                 onChange={onChangeInput}
               />
             </div>
-            <div class="login__field">
-              <i class="login__icon fas fa-lock"></i>
+            <div className="login__field">
+              <i className="login__icon fas fa-lock"></i>
               <input
                 type="password"
-                class="login__input"
+                className="login__input"
                 placeholder="Password"
                 name="password"
                 required
@@ -72,23 +56,23 @@ function Login() {
                 onChange={onChangeInput}
               />
             </div>
-            <button class="button login__submit">
-              <span class="button__text">Log In Now</span>
-              <i class="button__icon fas fa-chevron-right"></i>
+            <button className="button login__submit">
+              <span className="button__text">Log In Now</span>
+              <i className="button__icon fas fa-chevron-right"></i>
             </button>
           </form>
-          <button class="button register__submit">
-            <Link to="/register" class="button__text">
+          <button className="button register__submit">
+            <Link to="/register" className="button__text">
               Register
             </Link>
-            <i class="button__icon fas fa-chevron-right"></i>
+            <i className="button__icon fas fa-chevron-right"></i>
           </button>
         </div>
-        <div class="screen__background">
-          <span class="screen__background__shape screen__background__shape4"></span>
-          <span class="screen__background__shape screen__background__shape3"></span>
-          <span class="screen__background__shape screen__background__shape2"></span>
-          <span class="screen__background__shape screen__background__shape1"></span>
+        <div className="screen__background">
+          <span className="screen__background__shape screen__background__shape4"></span>
+          <span className="screen__background__shape screen__background__shape3"></span>
+          <span className="screen__background__shape screen__background__shape2"></span>
+          <span className="screen__background__shape screen__background__shape1"></span>
         </div>
       </div>
     </div>
