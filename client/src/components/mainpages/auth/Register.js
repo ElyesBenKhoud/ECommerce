@@ -27,21 +27,16 @@ function Register() {
     }
   };
 
-  const RenderLogin = (e) => {
-    e.preventDefault();
-    window.location.href = "/login";
-  };
-
   return (
-    <div className="container">
-      <div className="screen">
-        <div className="screen__content">
-          <form className="login" onSubmit={registerSubmit}>
-            <div className="login__field">
-              <i className="login__icon fas fa-user"></i>
+    <div class="container">
+      <div class="screen">
+        <div class="screen__content">
+          <form class="login" onSubmit={registerSubmit}>
+            <div class="login__field">
+              <i class="login__icon fas fa-user"></i>
               <input
                 type="text"
-                className="login__input"
+                class="login__input"
                 placeholder="Your name goes here ..."
                 name="name"
                 required
@@ -49,11 +44,11 @@ function Register() {
                 onChange={onChangeInput}
               />
             </div>
-            <div className="login__field">
-              <i className="login__icon fas fa-user"></i>
+            <div class="login__field">
+              <i class="login__icon fas fa-user"></i>
               <input
                 type="text"
-                className="login__input"
+                class="login__input"
                 placeholder="Email ..."
                 name="email"
                 required
@@ -61,11 +56,11 @@ function Register() {
                 onChange={onChangeInput}
               />
             </div>
-            <div className="login__field">
-              <i className="login__icon fas fa-lock"></i>
+            <div class="login__field">
+              <i class="login__icon fas fa-lock"></i>
               <input
                 type="password"
-                className="login__input"
+                class="login__input"
                 placeholder="Password"
                 name="password"
                 required
@@ -74,23 +69,23 @@ function Register() {
                 onChange={onChangeInput}
               />
             </div>
-            <button className="button login__submit">
-              <span className="button__text">Register Now</span>
-              <i className="button__icon fas fa-chevron-right"></i>
+            <button class="button login__submit">
+              <span class="button__text">Register Now</span>
+              <i class="button__icon fas fa-chevron-right"></i>
             </button>
           </form>
-          <button className="button register__submit" onClick={RenderLogin}>
-            {/* <Link to="/login" className="button__text"> */}
-            Already have an Account
-            {/* </Link> */}
-            <i className="button__icon fas fa-chevron-right"></i>
+          <button class="button register__submit">
+            <Link to="/login" class="button__text">
+              Already have an Account
+            </Link>
+            <i class="button__icon fas fa-chevron-right"></i>
           </button>
         </div>
-        <div className="screen__background">
-          <span className="screen__background__shape screen__background__shape4"></span>
-          <span className="screen__background__shape screen__background__shape3"></span>
-          <span className="screen__background__shape screen__background__shape2"></span>
-          <span className="screen__background__shape screen__background__shape1"></span>
+        <div class="screen__background">
+          <span class="screen__background__shape screen__background__shape4"></span>
+          <span class="screen__background__shape screen__background__shape3"></span>
+          <span class="screen__background__shape screen__background__shape2"></span>
+          <span class="screen__background__shape screen__background__shape1"></span>
         </div>
       </div>
     </div>

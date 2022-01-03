@@ -166,6 +166,8 @@
 .register__submit:hover {
   border-color: teal;
   outline: none;
+  text-decoration: none;
+  color: teal;
 }
 
 .button__icon {
@@ -201,4 +203,9 @@
 
 .social-login__icon:hover {
   transform: scale(1.5);
+}
+
+.register__submit .button__text {
+  text-decoration: none;
+  color: teal;
 }
