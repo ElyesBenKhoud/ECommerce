@@ -14,16 +14,18 @@ function Login() {
   };
 
   const loginSubmit = async (e) => {
-    e.preventDefault();
     try {
       await axios.post("/user/login", { ...user });
 
       localStorage.setItem("firstLogin", true);
-
-      window.location.href = "/";
     } catch (err) {
       alert(err.response.data.msg);
     }
+  };
+
+  const RenderRegister = (e) => {
+    e.preventDefault();
+    window.location.href = "/register";
   };
 
   return (
@@ -61,10 +63,10 @@ function Login() {
               <i className="button__icon fas fa-chevron-right"></i>
             </button>
           </form>
-          <button className="button register__submit">
-            <Link to="/register" className="button__text">
-              Register
-            </Link>
+          <button className="button register__submit" onClick={RenderRegister}>
+            {/* <Link to="/register" className="button__text"> */}
+            Register
+            {/* </Link> */}
             <i className="button__icon fas fa-chevron-right"></i>
           </button>
         </div>

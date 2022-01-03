@@ -27,6 +27,11 @@ function Register() {
     }
   };
 
+  const RenderLogin = (e) => {
+    e.preventDefault();
+    window.location.href = "/login";
+  };
+
   return (
     <div className="container">
       <div className="screen">
@@ -74,10 +79,10 @@ function Register() {
               <i className="button__icon fas fa-chevron-right"></i>
             </button>
           </form>
-          <button className="button register__submit">
-            <Link to="/login" className="button__text">
-              Already have an Account
-            </Link>
+          <button className="button register__submit" onClick={RenderLogin}>
+            {/* <Link to="/login" className="button__text"> */}
+            Already have an Account
+            {/* </Link> */}
             <i className="button__icon fas fa-chevron-right"></i>
           </button>
         </div>
