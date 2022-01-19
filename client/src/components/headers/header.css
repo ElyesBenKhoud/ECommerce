@@ -13,7 +13,8 @@ header .logo {
 }
 header a {
   text-transform: uppercase;
-  color: #555;
+  color: teal;
+  font-size: 28px;
 }
 header ul li {
   display: inline-block;

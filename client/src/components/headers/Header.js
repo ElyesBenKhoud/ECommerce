@@ -66,7 +66,7 @@ function Header() {
       </div>
 
       <ul style={styleMenu}>
-        <li>
+        <li onClick={() => setMenu(!menu)}>
           <Link to="/">{isAdmin ? "Products" : "Shop"}</Link>
         </li>
 
@@ -75,7 +75,7 @@ function Header() {
         {isLogged ? (
           loggedRouter()
         ) : (
-          <li>
+          <li onClick={() => setMenu(!menu)}>
             <Link to="/login">Login ✥ Register</Link>
           </li>
         )}
