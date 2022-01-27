@@ -18,11 +18,11 @@
 }
 
 .screen {
-  background: linear-gradient(90deg, white, #88ecd3);
+  background: linear-gradient(90deg, teal, #88ecd3);
   position: relative;
   height: 550px;
   width: 360px;
-  box-shadow: 0px 0px 44px white;
+  box-shadow: 0px 0px 44px teal;
 }
 
 .screen__content {
@@ -59,7 +59,7 @@
 .screen__background__shape2 {
   height: 220px;
   width: 220px;
-  background: white;
+  background: teal;
   top: -172px;
   right: 0;
   border-radius: 32px;
@@ -68,7 +68,7 @@
 .screen__background__shape3 {
   height: 540px;
   width: 190px;
-  background: linear-gradient(270deg, white, #88ecd3);
+  background: linear-gradient(270deg, teal, #88ecd3);
   top: -24px;
   right: 0;
   border-radius: 32px;
@@ -97,7 +97,7 @@
 .login__icon {
   position: absolute;
   top: 30px;
-  color: white;
+  color: teal;
 }
 
 .login__input {
@@ -116,7 +116,7 @@
 .login__input:focus,
 .login__input:hover {
   outline: none;
-  border-bottom-color: white;
+  border-bottom-color: teal;
 }
 
 .login__submit {
@@ -131,8 +131,8 @@
   display: flex;
   align-items: center;
   width: 80%;
-  color: white;
-  box-shadow: 0px 2px 2px white;
+  color: teal;
+  box-shadow: 0px 2px 2px teal;
   cursor: pointer;
   transition: 0.2s;
 }
@@ -149,8 +149,8 @@
   display: flex;
   align-items: center;
   width: 50%;
-  color: white;
-  box-shadow: 0px 2px 2px white;
+  color: teal;
+  box-shadow: 0px 2px 2px teal;
   cursor: pointer;
   transition: 0.2s;
 }
@@ -158,22 +158,22 @@
 .login__submit:active,
 .login__submit:focus,
 .login__submit:hover {
-  border-color: white;
+  border-color: teal;
   outline: none;
 }
 .register__submit:active,
 .register__submit:focus,
 .register__submit:hover {
-  border-color: white;
+  border-color: teal;
   outline: none;
   text-decoration: none;
-  color: white;
+  color: teal;
 }
 
 .button__icon {
   font-size: 24px;
   margin-left: auto;
-  color: white;
+  color: teal;
 }
 
 .social-login {
@@ -198,7 +198,7 @@
   padding: 20px 10px;
   color: #fff;
   text-decoration: none;
-  text-shadow: 0px 0px 8px white;
+  text-shadow: 0px 0px 8px teal;
 }
 
 .social-login__icon:hover {
@@ -207,5 +207,5 @@
 
 .register__submit .button__text {
   text-decoration: none;
-  color: white;
+  color: teal;
 }

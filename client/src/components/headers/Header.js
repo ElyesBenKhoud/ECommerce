@@ -61,13 +61,13 @@ function Header() {
 
       <div className="logo">
         <h1>
-          <Link to="/">{isAdmin ? "Admin" : "E-Commerce"}</Link>
+          <Link to="/">{isAdmin ? "Admin" : "Sweets HomeMade"}</Link>
         </h1>
       </div>
 
       <ul style={styleMenu}>
         <li onClick={() => setMenu(!menu)}>
-          <Link to="/">{isAdmin ? "Products" : "Shop"}</Link>
+          <Link to="/">{isAdmin ? "Products" : "Sweets"}</Link>
         </li>
 
         {isAdmin && adminRouter()}
