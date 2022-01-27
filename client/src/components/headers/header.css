@@ -6,14 +6,14 @@ header {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  border-bottom: 5px solid teal;
+  border-bottom: 5px solid white;
 }
 header .logo {
   flex: 1;
 }
 header a {
   text-transform: uppercase;
-  color: teal;
+  color: white;
   font-size: 28px;
 }
 header ul li {
@@ -32,7 +32,7 @@ header ul li:hover {
   margin-right: 20px;
 }
 .cart-icon span {
-  background: teal;
+  background: white;
   border-radius: 20px;
   color: white;
   position: absolute;

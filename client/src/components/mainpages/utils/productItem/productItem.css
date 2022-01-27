@@ -6,7 +6,7 @@
   box-shadow: 0 0 15px #ddd;
   margin: 10px 0;
   position: relative;
-  box-shadow: 20px 18px 18px rgb(127, 214, 214);
+  box-shadow: 20px 18px 18px rgb(190, 190, 190);
 }
 .product_card img {
   width: 100%;
@@ -55,7 +55,7 @@
   margin-right: 5px;
 }
 #btn_view {
-  background: teal;
+  background: white;
   margin-left: 5px;
 }
 .product_card input {
