@@ -60,7 +60,7 @@ function Login() {
               />
             </div>
             <button class="button login__submit">
-              <span class="button__text">Log In Now</span>
+              <span class="button__text">Log in now</span>
               <i class="button__icon fas fa-chevron-right"></i>
             </button>
           </form>
