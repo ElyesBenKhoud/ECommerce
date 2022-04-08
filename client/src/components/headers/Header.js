@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 
 function Header() {
+  //call state from contextAPI
   const state = useContext(GlobalState);
   const [isLogged] = state.userAPI.isLogged;
   const [isAdmin] = state.userAPI.isAdmin;
@@ -65,7 +66,7 @@ function Header() {
         </h1>
       </div>
 
-      <ul style={styleMenu}>
+      <ul style={styleMenu} className="navnav">
         <li onClick={() => setMenu(!menu)}>
           <Link to="/">{isAdmin ? "Products" : "Sweets"}</Link>
         </li>
